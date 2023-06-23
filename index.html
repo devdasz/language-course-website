@@ -7,9 +7,13 @@
   <title>Homepage</title>
   <link href="output.css" rel="stylesheet">
   <link rel="stylesheet" href="moving-letter.css">
+  <script src="./checkDarkMode.js">
+ 
+</script>
 </head>
 
-<body>
+<body class="dark:bg-gray-900">
+
   <!-- Navbar -->
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
@@ -42,6 +46,10 @@
             class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search...">
         </div>
+        <button id="theme-toggle" type="button" class="mx-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+      </button>
         <button data-collapse-toggle="navbar-search" type="button"
           class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-search" aria-expanded="false">
@@ -115,7 +123,7 @@
             clip-rule="evenodd"></path>
         </svg>
       </a>
-      <h1 class="ml11">
+      <h1 class="ml11 dark:text-white">
         <span class="text-wrapper">
           <span class="line line1"></span>
           <span class="letters">いらっしゃいませ</span>
@@ -207,10 +215,10 @@
 </div>
   <!-- Feature Blog -->
   <section class="max-w-screen-xl px-4 py-4 mx-auto mb-6 lg:py-4 lg:px-12">
-    <div class="flex justify-between">
+    <div class="flex justify-between mb-1">
       <h4 class="text-xl font-bold dark:text-white">Featured Blogs</h4>
       <button type="button"
-        class="text-black bg-primary-100 text-center inline-flex items-center hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">See
+        class="text-black bg-primary-100 text-center inline-flex items-center hover:bg-primary-800 hover:text-white focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:text-white dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">See
         All Blogs <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -345,7 +353,7 @@
     <div class=" sm:w-1/2" >
       <h2 class="mb-4 text-4xl font-bold dark:text-white">Helene Engels</h2>
       <p class="mb-4 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-        Hello, my name is Helene Engels. I am a Professional  <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Japanese Language Trainer</span> with more than 6 years of teaching experience. I have completed JLPT N3 Level and currently pursuing JLPT N2 Level. I have been teaching Japanese in India's most popular universities since 4.5 years. I worked as Japanese Language Teacher in school as well.</p>
+        Hello, my name is Helene Engels. I am a Professional  <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Japanese Language Trainer</span> with more than 6 years of teaching experience. I have completed JLPT N3 Level and currently pursuing JLPT N2 Level. I have been teaching Japanese in India's most popular universities since 4.5 years. I worked as Japanese Language Teacher in school as well.</p>
         <p class="mb-3 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
            Start your learning adventure today at Japan Acacdemy and experience the joy of mastering the Japanese language.</p>
 
@@ -496,6 +504,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="./moving-letter.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+  <script src="./darkModeApply.js">
+
+  </script>
 </body>
 
 </html>
